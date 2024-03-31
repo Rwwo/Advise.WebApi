@@ -11,7 +11,7 @@ namespace advise.webapi.application.CQImovel
     {
         private readonly IUnitOfWork _uow;
         private readonly IMapper _mapper;
-        public DeletarImovelCommandHandler (IUnitOfWork uow, IMapper mapper, INotificador notificador)
+        public DeletarImovelCommandHandler(IUnitOfWork uow, IMapper mapper, INotificador notificador)
             : base(notificador)
         {
             _uow = uow;

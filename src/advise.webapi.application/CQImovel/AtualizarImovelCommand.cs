@@ -1,4 +1,4 @@
-﻿using advise.webapi.api.InputModels;
+﻿using advise.webapi.core.InputModels;
 
 using MediatR;
 

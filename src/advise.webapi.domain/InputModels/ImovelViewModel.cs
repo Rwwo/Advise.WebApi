@@ -2,7 +2,7 @@
 
 using advise.webapi.core.Models;
 
-namespace advise.webapi.api.InputModels
+namespace advise.webapi.core.InputModels
 {
     public class ImovelViewModel
     {
@@ -30,12 +30,11 @@ namespace advise.webapi.api.InputModels
         public string Observacoes { get; set; }
 
         [Required(ErrorMessage = "O campo Proprietario é obrigatório.")]
-        public Guid ProprietarioId { get; set; }    
+        public Guid ProprietarioId { get; set; }
 
         public EnderecoViewModel Endereco { get; set; }
 
         [Required(ErrorMessage = "O campo Status é obrigatório.")]
         public bool Status { get; set; }
     }
-
 }

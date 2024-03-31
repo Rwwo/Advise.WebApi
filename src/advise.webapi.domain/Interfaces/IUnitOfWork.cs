@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace advise.webapi.core.Interfaces
+﻿namespace advise.webapi.core.Interfaces
 {
     public interface IUnitOfWork : IDisposable
     {

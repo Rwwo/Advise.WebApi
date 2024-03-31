@@ -21,14 +21,14 @@ namespace advise.webapi.application.CQInquilino
         {
             var inquilino = await _uow.InquilinoRepository.ObterPorId(request.Id);
 
-            if(inquilino == null)
+            if (inquilino == null)
             {
                 Notificar("Inquilino não encontrado");
                 return false;
             }
 
             inquilino.Deletar();
-            
+
             await _uow.InquilinoRepository.Atualizar(inquilino);
 
             return true;

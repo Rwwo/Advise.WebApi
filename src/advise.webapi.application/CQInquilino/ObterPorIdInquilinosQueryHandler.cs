@@ -1,4 +1,4 @@
-﻿using advise.webapi.api.InputModels;
+﻿using advise.webapi.core.InputModels;
 using advise.webapi.core.Interfaces;
 
 using AutoMapper;
@@ -18,7 +18,7 @@ namespace advise.webapi.application.CQInquilino
         }
         public async Task<InquilinoViewModel> Handle(ObterPorIdInquilinosQuery request, CancellationToken cancellationToken)
         {
-            
+
             var resultDb = await _uow.InquilinoRepository.ObterPorId(request.Id);
 
             return _mapper.Map<InquilinoViewModel>(resultDb);

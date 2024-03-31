@@ -11,7 +11,7 @@ namespace advise.webapi.application.CQProprietario
     {
         private readonly IUnitOfWork _uow;
         private readonly IMapper _mapper;
-        public DeletarProprietarioCommandHandler (IUnitOfWork uow, IMapper mapper, INotificador notificador)
+        public DeletarProprietarioCommandHandler(IUnitOfWork uow, IMapper mapper, INotificador notificador)
             : base(notificador)
         {
             _uow = uow;

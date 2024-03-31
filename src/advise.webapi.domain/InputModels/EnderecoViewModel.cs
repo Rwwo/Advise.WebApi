@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace advise.webapi.api.InputModels
+namespace advise.webapi.core.InputModels
 {
     public class EnderecoViewModel
     {

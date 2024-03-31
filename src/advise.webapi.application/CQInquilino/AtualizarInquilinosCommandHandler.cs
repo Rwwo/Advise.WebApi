@@ -1,4 +1,4 @@
-﻿using advise.webapi.api.InputModels;
+﻿using advise.webapi.core.InputModels;
 using advise.webapi.core.Interfaces;
 using advise.webapi.core.Models;
 using advise.webapi.core.Models.Validations;
@@ -24,9 +24,9 @@ namespace advise.webapi.application.CQInquilino
         {
             var inquilinoMap = _mapper.Map<Inquilino>(request.Inquilino);
 
-            if(!ExecutarValidacao(new InquilinoValidation(), inquilinoMap))
+            if (!ExecutarValidacao(new InquilinoValidation(), inquilinoMap))
                 return request.Inquilino;
-            
+
             await _uow.InquilinoRepository.Atualizar(inquilinoMap);
 
             await _uow.Commit();

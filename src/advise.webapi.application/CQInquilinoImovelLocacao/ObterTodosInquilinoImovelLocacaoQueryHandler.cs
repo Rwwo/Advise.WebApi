@@ -1,4 +1,4 @@
-﻿using advise.webapi.api.InputModels;
+﻿using advise.webapi.core.InputModels;
 using advise.webapi.core.Interfaces;
 
 using AutoMapper;
@@ -7,7 +7,7 @@ using MediatR;
 
 namespace advise.webapi.application.CQInquilinoImovelLocacao
 {
-    public class ObterTodosInquilinoImovelLocacaoQueryHandler : IRequestHandler<ObterTodosInquilinoImovelLocacaoQuery, IEnumerable<InquilinoImovelLocacaoViewModel>>
+    public class ObterTodosInquilinoImovelLocacaoQueryHandler : IRequestHandler<ObterTodosInquilinoImovelLocacaoQuery, IEnumerable<InquilinoImovelLocacaoDetalhadaViewModel>>
     {
         private readonly IUnitOfWork _uow;
         private readonly IMapper _mapper;
@@ -16,14 +16,13 @@ namespace advise.webapi.application.CQInquilinoImovelLocacao
             _uow = uow;
             _mapper = mapper;
         }
-        public async Task<IEnumerable<InquilinoImovelLocacaoViewModel>> Handle(ObterTodosInquilinoImovelLocacaoQuery request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<InquilinoImovelLocacaoDetalhadaViewModel>> Handle(ObterTodosInquilinoImovelLocacaoQuery request, CancellationToken cancellationToken)
         {
             var resultDb = await _uow.InquilinoImovelLocacaoRepository.ObterTodosComDadosAdicionais();
 
-            var mapp = _mapper.Map<List<InquilinoImovelLocacaoViewModel>>(resultDb);
+            var mapp = _mapper.Map<IEnumerable<InquilinoImovelLocacaoDetalhadaViewModel>>(resultDb);
 
             return mapp;
-
         }
     }
 }

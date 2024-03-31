@@ -5,7 +5,7 @@
         public DateTime DataEntrada { get; set; }
         public DateTime? DataSaida { get; set; }
 
-        public Guid AtendimentoCorretorId {  get; set; }
+        public Guid AtendimentoCorretorId { get; set; }
         public Guid InquilinoId { get; set; }
         public Guid ImovelId { get; set; }
 

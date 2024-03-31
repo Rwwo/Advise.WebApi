@@ -8,7 +8,7 @@ namespace advise.webapi.application
         {
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-            return services.AddMediatR(cfg 
+            return services.AddMediatR(cfg
                 => cfg.RegisterServicesFromAssembly(typeof(application.ApplicationModule).Assembly));
         }
     }

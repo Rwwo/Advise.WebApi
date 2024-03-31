@@ -11,7 +11,7 @@ namespace advise.webapi.infrastructure.Context
         public ApiContext(DbContextOptions<ApiContext> options)
             : base(options)
         {
-            
+
         }
 
         public DbSet<Corretor> Corretores { get; set; }

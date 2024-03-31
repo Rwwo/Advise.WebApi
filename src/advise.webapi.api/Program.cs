@@ -1,6 +1,6 @@
 using advise.webapi.api.Extensions;
-using advise.webapi.infrastructure;
 using advise.webapi.application;
+using advise.webapi.infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 builder
@@ -8,7 +8,7 @@ builder
     .Services
         .AddInfrastructureModule(builder.Configuration);
 
- builder.Services.AddApplicationModule();
+builder.Services.AddApplicationModule();
 
 var app = builder.Build();
 

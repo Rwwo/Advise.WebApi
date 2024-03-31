@@ -11,7 +11,7 @@ namespace advise.webapi.application.CQCorretor
     {
         private readonly IUnitOfWork _uow;
         private readonly IMapper _mapper;
-        public DeletarCorretorCommandHandler (IUnitOfWork uow, IMapper mapper, INotificador notificador)
+        public DeletarCorretorCommandHandler(IUnitOfWork uow, IMapper mapper, INotificador notificador)
             : base(notificador)
         {
             _uow = uow;

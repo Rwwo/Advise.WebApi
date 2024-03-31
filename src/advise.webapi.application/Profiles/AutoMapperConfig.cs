@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using advise.webapi.api.InputModels;
+﻿using advise.webapi.core.InputModels;
 using advise.webapi.core.Models;
 
 using AutoMapper;
@@ -23,12 +17,18 @@ namespace advise.webapi.application.Profiles
 
             CreateMap<Imovel, ImovelViewModel>().ReverseMap();
 
+            CreateMap<Imovel, ImovelDetalhadoViewModel>().ReverseMap();
+
             CreateMap<Endereco, EnderecoViewModel>().ReverseMap();
 
             CreateMap<InquilinoImovelLocacao, InquilinoImovelLocacaoViewModel>().ReverseMap();
 
             CreateMap<InquilinoImovelLocacao, InquilinoImovelLocacaoDetalhadaViewModel>()
-                .ForMember(dest => dest.imo)
+                .ForMember(dest => dest.Imovel, opt => opt.MapFrom(src => src.Imovel))
+                .ForMember(dest => dest.Inquilino, opt => opt.MapFrom(src => src.Inquilino))
+                .ForMember(dest => dest.Corretor, opt => opt.MapFrom(src => src.AtendimentoCorretor.Corretor))
+                .ForMember(dest => dest.Proprietario, opt => opt.MapFrom(src => src.Imovel.Proprietario))
+                ;
 
             CreateMap<CorretorInquilinoContatos, CorretorInquilinoContatosViewModel>().ReverseMap();
 

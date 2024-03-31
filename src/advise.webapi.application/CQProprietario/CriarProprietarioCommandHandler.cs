@@ -1,7 +1,7 @@
-﻿using advise.webapi.api.InputModels;
+﻿using advise.webapi.core.InputModels;
 using advise.webapi.core.Interfaces;
-using advise.webapi.core.Models.Validations;
 using advise.webapi.core.Models;
+using advise.webapi.core.Models.Validations;
 using advise.webapi.core.Services;
 
 using AutoMapper;

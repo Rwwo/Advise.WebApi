@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace advise.webapi.api.InputModels
+﻿namespace advise.webapi.core.InputModels
 {
     public class InquilinoImovelLocacaoDetalhadaViewModel
     {
@@ -9,7 +7,8 @@ namespace advise.webapi.api.InputModels
 
         public DateTime? DataSaida { get; set; }
 
-        public ImovelViewModel Imovel { get; set; }
+        public ImovelDetalhadoViewModel Imovel { get; set; }
+        public InquilinoViewModel Inquilino { get; set; }
         public ProprietarioViewModel Proprietario { get; set; }
 
         public CorretorViewModel Corretor { get; set; }

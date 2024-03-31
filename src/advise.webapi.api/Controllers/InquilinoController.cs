@@ -1,10 +1,12 @@
-﻿using advise.webapi.api.InputModels;
+﻿using System.Net;
+
 using advise.webapi.application.CQInquilino;
+using advise.webapi.core.InputModels;
 using advise.webapi.core.Interfaces;
 
 using MediatR;
+
 using Microsoft.AspNetCore.Mvc;
-using System.Net;
 
 namespace advise.webapi.api.Controllers
 {

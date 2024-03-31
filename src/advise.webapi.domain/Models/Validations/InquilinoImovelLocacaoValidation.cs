@@ -16,10 +16,10 @@ namespace advise.webapi.core.Models.Validations
 
             RuleFor(locacao => locacao.AtendimentoCorretorId)
                 .NotEmpty().WithMessage("O ID do atendimento do corretor é obrigatório.");
-            
+
             RuleFor(locacao => locacao.InquilinoId)
                 .NotEmpty().WithMessage("O ID do inquilino é obrigatório.");
-            
+
             RuleFor(locacao => locacao.ImovelId)
                 .NotEmpty().WithMessage("O ID do imóvel é obrigatório.");
 

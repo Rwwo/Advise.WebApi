@@ -11,7 +11,7 @@
         /* ef */
         //public InquilinoImovelLocacao? InquilinoImovelLocacao { get; set; }
         public Corretor? Corretor { get; set; }
-        public Inquilino? Inquilino { get; set; }        
+        public Inquilino? Inquilino { get; set; }
     }
 }
 

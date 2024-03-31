@@ -1,8 +1,6 @@
 ﻿using advise.webapi.core.Interfaces;
 using advise.webapi.infrastructure.Context;
 
-using Microsoft.EntityFrameworkCore;
-
 namespace advise.webapi.infrastructure.Repository
 {
     public class UnitOfWork : IUnitOfWork

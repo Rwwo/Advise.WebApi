@@ -3,7 +3,7 @@
 using System.Security.Claims;
 using System.Text;
 
-using advise.webapi.api.InputModels;
+using advise.webapi.core.InputModels;
 using advise.webapi.core.Models;
 
 using Microsoft.AspNetCore.Identity;

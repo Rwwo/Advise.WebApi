@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Microsoft.AspNetCore.Mvc;
-using System.Net;
+﻿using System.Net;
+
 using advise.webapi.core.Interfaces;
 using advise.webapi.core.Notificacoes;
+
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace advise.webapi.api.Controllers
 {

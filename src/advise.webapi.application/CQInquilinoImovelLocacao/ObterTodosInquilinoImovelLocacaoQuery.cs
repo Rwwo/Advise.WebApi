@@ -1,11 +1,10 @@
-﻿using advise.webapi.api.InputModels;
-using advise.webapi.application.CQInquilino;
+﻿using advise.webapi.core.InputModels;
 
 using MediatR;
 
 namespace advise.webapi.application.CQInquilinoImovelLocacao
 {
-    public class ObterTodosInquilinoImovelLocacaoQuery : IRequest<IEnumerable<InquilinoImovelLocacaoViewModel>>
+    public class ObterTodosInquilinoImovelLocacaoQuery : IRequest<IEnumerable<InquilinoImovelLocacaoDetalhadaViewModel>>
     {
     }
 }

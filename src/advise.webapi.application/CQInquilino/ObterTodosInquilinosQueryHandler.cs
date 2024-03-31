@@ -1,12 +1,11 @@
-﻿using advise.webapi.api.InputModels;
-using advise.webapi.application.CQInquilino;
+﻿using advise.webapi.core.InputModels;
 using advise.webapi.core.Interfaces;
 
 using AutoMapper;
 
 using MediatR;
 
-namespace advise.webapi.application.CQInquilinoCQ
+namespace advise.webapi.application.CQInquilino
 {
     public class ObterTodosInquilinosQueryHandler : IRequestHandler<ObterTodosInquilinosQuery, IEnumerable<InquilinoViewModel>>
     {
