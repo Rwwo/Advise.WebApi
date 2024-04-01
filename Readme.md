@@ -24,3 +24,13 @@ Para executar o projeto, siga estas etapas:
 2. Abra o projeto em sua IDE de preferência.
 3. Compile e execute a aplicação.
 4. Acesse a API por meio do endpoint fornecido.
+
+## IMPORTANTE:
+* O projeto possui o funcionalidade de autenticação. O mesmo serve para demonstrar o domínio sobre o pacote (não foram adicionados os annotations de [authorize] nas controller para não dificultar a utilização da documentação viva);
+* O projeto possui CRUD total para as entidades: CORRETOR, IMÓVEL, INQUILINO E PROPRIETÁRIO;
+	* O projeto possui apenas POST para CORRETOR INQUILINO CONTATO e CORRETOR PROPRIETARIO CONTATO.
+	Ambas servem para armazenar iterações entre as 'personas' na situação fictícia do projeto (inquilino(cliente) chamando corretor em busca de imovel)
+	Proprietário chamando corretor para situação XPTO.
+* O projeto possui uma controller chamada InquilinoImovelLocacao. O Post dessa controller é responsável por informar ao backend que se 'iniciou' um processo de aluguel;
+	 O Putch informa que o mesmo se finalizou. Ambos possuem a relação através chave estrangeira com corretor inquilino contato.
+	 Ainda na mesma controller, existe um método get que é responsável por emitir o 'relatório'. Imoveis alugados, com dados de proprietário + inquilino + corretor.
