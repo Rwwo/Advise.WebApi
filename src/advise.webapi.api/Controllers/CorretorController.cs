@@ -15,6 +15,7 @@ namespace advise.webapi.api.Controllers
     public class CorretorController : MainController
     {
         private readonly IMediator _mediator;
+
         public CorretorController(IMediator mediator,
             INotificador notificador) : base(notificador)
         {

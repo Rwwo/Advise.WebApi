@@ -6,11 +6,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder
     .AddSwaggerConfig()
     .Services
-        .AddInfrastructureModule(builder.Configuration);
+        .AddInfrastructureModule(builder.Configuration)
+        ;
 
 builder.Services.AddApplicationModule();
 
 var app = builder.Build();
+
 
 if (app.Environment.IsDevelopment())
 {
@@ -22,6 +24,9 @@ else
 {
     app.UseCors("Production");
 }
+
+app.ConfigureCustomExceptionHandler();
+//app.UseExceptionHandler();
 
 app.UseHttpsRedirection();
 

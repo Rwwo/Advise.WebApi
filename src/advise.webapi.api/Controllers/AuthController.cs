@@ -21,13 +21,16 @@ namespace advise.webapi.api.Controllers
         private readonly UserManager<IdentityUser> _userManager;
         private readonly JwtSettings _jwtSettings;
 
+        private readonly ILogger<AuthController> _logger;
         public AuthController(SignInManager<IdentityUser> signInManager,
                               UserManager<IdentityUser> userManager,
-                              IOptions<JwtSettings> jwtSettings)
+                              IOptions<JwtSettings> jwtSettings,
+                              ILogger<AuthController> logger)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _jwtSettings = jwtSettings.Value;
+            _logger = logger;
         }
 
         [HttpPost("registrar")]
@@ -67,6 +70,11 @@ namespace advise.webapi.api.Controllers
 
             return Problem("Usuário ou senha incorretos");
         }
+
+        [HttpGet("exception")]
+        public IActionResult GetByName() => throw new Exception("Endpoint para validação de logger.");
+
+
 
         private async Task<string> GerarJwt(string email)
         {
